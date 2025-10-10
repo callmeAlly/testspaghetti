@@ -34,6 +34,7 @@
             overflow-y: auto;
             max-height: 100vh;
             box-sizing: border-box;
+            border-radius: 8px;
         }
 
         #sidebar.open {
@@ -192,8 +193,6 @@
 
         
 
-        
-        
         @font-face {
             font-family: "Quicksand";
             src: url("fonts/Quicksand-Regular.ttf") format("truetype"),
@@ -604,8 +603,11 @@
     
 
     var fragmentOriginalCoords = [
-        [4030,0],
-        [6181,0],
+        [4915,830],
+        [5294,696],
+        [5722,696],
+        [5739,647],
+        [5951,703],
         [5013,3556],
         [4569,3490],
         [4466,3468], 
@@ -622,8 +624,7 @@
         [4964,1349],
         [4971,1255],
         [4971,1074],
-        [4873,1024],
-        [4030,539]
+        [5008,1097]
     ];
 
     var skyarcOriginalCoords = [
@@ -681,9 +682,13 @@
 
     var stackOriginalCoords = [
         [0,0],
-        [4029,0],
-        [4029,540],
-        [4873,1025],
+        [6181,0],
+        [5951,702],
+        [5738,646],
+        [5722,695],
+        [5294,695],
+        [4914,829],
+        [5007,1097],
         [4970,1074],
         [4970,1255],
         [4963,1349],
@@ -1373,6 +1378,18 @@
             `
         },
         {
+            id: "preparation",
+            position: transCoord(4408,1758),
+            icon: poiIcons["sync"],
+            isSelected: false,
+            zoomThreshold: 0,
+            title: `<span style="color: white; font-family: 'Jura'; font-size: 24px; font-weight: normal;">Preparation</span>`,
+            content: `
+                <img src="images/icons/lol.png" alt="Preparation" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+                <p><span style="color: white; font-family: 'Source Sans 3'; font-weight: 300;">Shortcut!</span></p>
+            `
+        },
+        {
             id: "propHunt",
             position: transCoord(4546,2053),
             icon: poiIcons["sync"],
@@ -1615,6 +1632,30 @@
             `
         },
         {
+            id: "vertigoBalconies",
+            position: transCoord(4269,1762),
+            icon: poiIcons["sync"],
+            isSelected: false,
+            zoomThreshold: 0,
+            title: `<span style="color: white; font-family: 'Jura'; font-size: 24px; font-weight: normal;">Vertigo Balconies</span>`,
+            content: `
+                <img src="images/icons/lol.png" alt="WarehouseVertigo Balconies" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+                <p><span style="color: white; font-family: 'Source Sans 3'; font-weight: 300;">Unforgettable, the nostalgic greenery.</span></p>
+            `
+        },
+        {
+            id: "vertigoWarehouse",
+            position: transCoord(4269,1792),
+            icon: poiIcons["sync"],
+            isSelected: false,
+            zoomThreshold: 0,
+            title: `<span style="color: white; font-family: 'Jura'; font-size: 24px; font-weight: normal;">Vertigo Warehouse</span>`,
+            content: `
+                <img src="images/icons/lol.png" alt="Vertigo Warehouse" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+                <p><span style="color: white; font-family: 'Source Sans 3'; font-weight: 300;">The long way.</span></p>
+            `
+        },
+        {
             id: "vertigo",
             position: transCoord(4347,1908),
             icon: poiIcons["sync"],
@@ -1726,6 +1767,18 @@
             `
         },
         {
+            id: "artemisBasement",
+            position: transCoord(2890,3466),
+            icon: poiIcons["sync"],
+            isSelected: false,
+            zoomThreshold: 0,
+            title: `<span style="color: white; font-family: 'Jura'; font-size: 24px; font-weight: normal;">Artemis Basement</span>`,
+            content: `
+                <img src="images/icons/lol.png" alt="Artemis Basement" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+                <p><span style="color: white; font-family: 'Source Sans 3'; font-weight: 300;">Going up!</span></p>
+            `
+        },
+        {
             id: "artemisEntrance",
             position: transCoord(2918,3465),
             icon: poiIcons["sync"],
@@ -1740,26 +1793,38 @@
         },
         {
             id: "artemisInterior",
-            position: transCoord(2800,3499),
+            position: transCoord(2811,3344),
             icon: poiIcons["sync"],
             isSelected: false,
             zoomThreshold: 0,
             title: `<span style="color: white; font-family: 'Jura'; font-size: 24px; font-weight: normal;">Artemis Interior</span>`,
             content: `
                 <img src="images/icons/lol.png" alt="Artemis Interior" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
-                <p><span style="color: white; font-family: 'Source Sans 3'; font-weight: 300;">Don't take the exit elevator.</span></p>
+                <p><span style="color: white; font-family: 'Source Sans 3'; font-weight: 300;">Falling with style.</span></p>
             `
         },
         {
-            id: "artemisTop",
-            position: transCoord(2841,3441),
+            id: "artemisWindows",
+            position: transCoord(2845,3421),
             icon: poiIcons["sync"],
             isSelected: false,
             zoomThreshold: 0,
-            title: `<span style="color: white; font-family: 'Jura'; font-size: 24px; font-weight: normal;">Artemis Top</span>`,
+            title: `<span style="color: white; font-family: 'Jura'; font-size: 24px; font-weight: normal;">Artemis Windows</span>`,
             content: `
-                <img src="images/icons/lol.png" alt="Artemis Top" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+                <img src="images/icons/lol.png" alt="Artemis Windows" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
                 <p><span style="color: white; font-family: 'Source Sans 3'; font-weight: 300;">You're not paying for the windows, are you...</span></p>
+            `
+        },
+        {
+            id: "cloud",
+            position: transCoord(3231,1879),
+            icon: poiIcons["sync"],
+            isSelected: false,
+            zoomThreshold: 0,
+            title: `<span style="color: white; font-family: 'Jura'; font-size: 24px; font-weight: normal;">Cloud</span>`,
+            content: `
+                <img src="images/icons/lol.png" alt="Cloud" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+                <p><span style="color: white; font-family: 'Source Sans 3'; font-weight: 300;">Take your head out of the clouds.</span></p>
             `
         },
         {
@@ -1836,7 +1901,7 @@
         },
         {
             id: "fahrenheit",
-            position: transCoord(3220,1643),
+            position: transCoord(3220,1646),
             icon: poiIcons["sync"],
             isSelected: false,
             zoomThreshold: 0,
@@ -2039,6 +2104,18 @@
             `
         },
         {
+            id: "ventilation",
+            position: transCoord(2920,1523),
+            icon: poiIcons["sync"],
+            isSelected: false,
+            zoomThreshold: 0,
+            title: `<span style="color: white; font-family: 'Jura'; font-size: 24px; font-weight: normal;">Ventilation</span>`,
+            content: `
+                <img src="images/icons/lol.png" alt="Ventilation" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+                <p><span style="color: white; font-family: 'Source Sans 3'; font-weight: 300;">It is not that cold...</span></p>
+            `
+        },
+        {
             id: "workshopGarage",
             position: transCoord(3303,3330),
             icon: poiIcons["sync"],
@@ -2136,12 +2213,12 @@
             `
         },
         {
-            id: "artemisTop_2",
-            position: transCoord(2884,3493),
+            id: "artemisTop",
+            position: transCoord(2871,3482),
             icon: poiIcons["sync"],
             isSelected: false,
             zoomThreshold: 0,
-            title: `<span style="color: white; font-family: 'Jura'; font-size: 24px; font-weight: normal;">Artemis Top (top)</span>`,
+            title: `<span style="color: white; font-family: 'Jura'; font-size: 24px; font-weight: normal;">Artemis Top</span>`,
             content: `
                 <img src="images/icons/lol.png" alt="Artemis Top" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
                 <p><span style="color: white; font-family: 'Source Sans 3'; font-weight: 300;">Yes, the spire is <i>that</i> big.<br>Does it count? Who knows...</span></p>
@@ -4245,9 +4322,7 @@
                 <img src="images/icons/lol.png" alt="EMAG Accelerator" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
                 <p><span style="color: white; font-family: 'Source Sans 3'; font-weight: 300;">EMAG Accelerator.</span></p>
             `
-        },
-
-        
+        },   
         {
             id: "microPulseDriver",
             position: transCoord(3158,4064),
@@ -4433,6 +4508,69 @@
         },
 
         
+            
+        {
+            id: "frameExtensionUnit2",
+            position: transCoord(3302,2851),
+            icon: poiIcons["resource"],
+            isSelected: false,
+            zoomThreshold: -0.5,
+            title: `<span style="color: white; font-family: 'Jura'; font-size: 24px; font-weight: normal;">Frame Extension Unit</span>`,
+            content: `
+                <img src="images/icons/lol.png" alt="Frame Extension Unit" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+                <p><span style="color: white; font-family: 'Source Sans 3'; font-weight: 300;">Frame Extension Unit.</span></p>
+            `
+        },
+            
+        {
+            id: "hookLatch1",   
+            position: transCoord(2787,1355),
+            icon: poiIcons["resource"],
+            isSelected: false,
+            zoomThreshold: -0.5,
+            title: `<span style="color: white; font-family: 'Jura'; font-size: 24px; font-weight: normal;">Hook Latch</span>`,
+            content: `
+                <img src="images/icons/lol.png" alt="Hook Latch" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+                <p><span style="color: white; font-family: 'Source Sans 3'; font-weight: 300;">Hook Latch.</span></p>
+            `
+        },
+        {
+            id: "hookLatch2",   
+            position: transCoord(2936,3868),
+            icon: poiIcons["resource"],
+            isSelected: false,
+            zoomThreshold: -0.5,
+            title: `<span style="color: white; font-family: 'Jura'; font-size: 24px; font-weight: normal;">Hook Latch</span>`,
+            content: `
+                <img src="images/icons/lol.png" alt="Hook Latch" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+                <p><span style="color: white; font-family: 'Source Sans 3'; font-weight: 300;">Hook Latch.</span></p>
+            `
+        },
+        {
+            id: "frameExtensionUnit1",
+            position: transCoord(2771,4187),
+            icon: poiIcons["resource"],
+            isSelected: false,
+            zoomThreshold: -0.5,
+            title: `<span style="color: white; font-family: 'Jura'; font-size: 24px; font-weight: normal;">Frame Extension Unit</span>`,
+            content: `
+                <img src="images/icons/lol.png" alt="Frame Extension Unit" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+                <p><span style="color: white; font-family: 'Source Sans 3'; font-weight: 300;">Frame Extension Unit.</span></p>
+            `
+        },
+        {
+            id: "tensionCompressor",
+            position: transCoord(2556,4565),
+            icon: poiIcons["resource"],
+            isSelected: false,
+            zoomThreshold: -0.5,
+            title: `<span style="color: white; font-family: 'Jura'; font-size: 24px; font-weight: normal;">Tension Compressor</span>`,
+            content: `
+                <img src="images/icons/lol.png" alt="Tension Compressor" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+                <p><span style="color: white; font-family: 'Source Sans 3'; font-weight: 300;">Tension Compressor.</span></p>
+            `
+        },
+        
     ]
 
 
@@ -4581,9 +4719,9 @@
                     <img src="images/icons/platinum.webp" width="18" style="position: relative; top: 2px;">
                     <span style="color: white; font-family: 'Jura'; font-size: 18px; font-weight: 300;"> 12.000<br></span>
                     <img src="images/icons/gold.webp" width="18" style="position: relative; top: 2px;">
-                    <span style="color: white; font-family: 'Jura'; font-size: 18px; font-weight: 300;"> 18.000<br></span>
+                    <span style="color: white; font-family: 'Jura'; font-size: 18px; font-weight: 300;"> 16.000<br></span>
                     <img src="images/icons/silver.webp" width="18" style="position: relative; top: 2px;">
-                    <span style="color: white; font-family: 'Jura'; font-size: 18px; font-weight: 300;"> 20.000<br></span>
+                    <span style="color: white; font-family: 'Jura'; font-size: 18px; font-weight: 300;"> 19.000<br></span>
                     <img src="images/icons/bronze.webp" width="18" style="position: relative; top: 2px;">
                     <span style="color: white; font-family: 'Jura'; font-size: 18px; font-weight: 300;"> 25.000</span>`
         },
@@ -4802,7 +4940,7 @@
             id: "gale",
             position: transCoord(5637,800),
             goalPosition: [transCoord(5335,800)],
-            icon: poiIcons["advancedTrial"],
+            icon: poiIcons["moderateTrial"],
             isSelected: false,
             zoomThreshold: -1.2,
             title: `<span style="color: white; font-family: 'Jura'; font-size: 24px; font-weight: normal;">Gale</span>`,
@@ -5061,7 +5199,7 @@
             zoomThreshold: -0.6,
             title: `<span style="color: white; font-family: 'Jura'; font-size: 24px; font-weight: normal;">Julian</span>`,
             content: `
-                <img src="images/npcs/Julian0.png" alt="Julian" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+                <img src="images/npcs/Julian0.webp" alt="Julian" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
                 
                 <span style="color: white; font-family: 'Jura'; font-weight: 300; font-size: 18px;">Quest giver.<br></span>
 
@@ -5104,7 +5242,7 @@
             zoomThreshold: -0.6,
             title: `<span style="color: white; font-family: 'Jura'; font-size: 24px; font-weight: normal;">Derek</span>`,
             content: `
-                <img src="images/npcs/Derek0.png" alt="Derek" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+                <img src="images/npcs/Derek0.webp" alt="Derek" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
                 
                 <span style="color: white; font-family: 'Jura'; font-weight: 300; font-size: 18px;">Vendor/Quest giver.<br></span>
 
@@ -5232,7 +5370,7 @@
             zoomThreshold: -0.6,
             title: `<span style="color: white; font-family: 'Jura'; font-size: 24px; font-weight: normal;">Mantra</span>`,
             content: `
-                <img src="images/npcs/Mantra0.png" alt="Mantra" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+                <img src="images/npcs/Mantra0.webp" alt="Mantra" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
                 
                 <span style="color: white; font-family: 'Jura'; font-weight: 300; font-size: 18px;">NPC.<br></span>
                 
@@ -5251,7 +5389,7 @@
             zoomThreshold: -0.6,
             title: `<span style="color: white; font-family: 'Jura'; font-size: 24px; font-weight: normal;">Mike</span>`,
             content: `
-                <img src="images/npcs/Mike0.png" alt="Mike" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+                <img src="images/npcs/Mike0.webp" alt="Mike" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
                 
                 <span style="color: white; font-family: 'Jura'; font-weight: 300; font-size: 18px;">Quest giver.<br></span>
                 
@@ -5271,7 +5409,7 @@
             zoomThreshold: -0.6,
             title: `<span style="color: white; font-family: 'Jura'; font-size: 24px; font-weight: normal;">Petra</span>`,
             content: `
-                <img src="images/npcs/Petra0.png" alt="Petra" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+                <img src="images/npcs/Petra0.webp" alt="Petra" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
                 
                 <span style="color: white; font-family: 'Jura'; font-weight: 300; font-size: 18px;">Vendor.<br></span>
 
@@ -5414,6 +5552,88 @@
 
             `
         },
+        {
+            id: "connor",
+            position: transCoord(3219,1633),
+            goalPosition: null,
+            icon: poiIcons["npc"],
+            isSelected: false,
+            zoomThreshold: -0.6,
+            title: `<span style="color: white; font-family: 'Jura'; font-size: 24px; font-weight: normal;">Connor</span>`,
+            content: `
+                <img src="images/npcs/Connor0.webp" alt="Connor" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+                
+                <span style="color: white; font-family: 'Jura'; font-weight: 300; font-size: 18px;">Vendor.<br></span>
+
+                <p style="color: white; font-family: 'Jura'; font-weight: 300; font-size: 18px; text-align: center;">Stock</p>
+
+                <table border="1" style="border-collapse: collapse; width: 100%;">
+                    <colgroup>
+                        <col style="width: 250px;">
+                        <col style="width: 20px;">
+                        <col style="width: 110px;">
+                    </colgroup>
+
+
+                    <tr>
+                        <td span style="text-align: center;"><span style="font-family: 'Jura'; font-weight: normal;">Item</span></td>
+                        <td span style="text-align: center;"><span style="font-family: 'Jura'; font-weight: normal;">Qty.</span></td>
+                        <td span style="text-align: center;"><span style="font-family: 'Jura'; font-weight: normal;">Price</span></td>
+                    </tr>
+
+                    <tr><td colspan="3" style="text-align: center;"><span style="color: white; font-family: 'Jura'; font-weight: 300;">
+                        Crafting Resources
+                    </span></td></tr>
+
+                    <tr>
+                        <td><span style="font-family: 'Jura'; font-weight: normal;">Springhook Chassis</span></td>
+                        <td><span style="font-family: 'Jura'; font-weight: normal;">2</span></td>
+                        <td>
+                            <div>
+                                <img src="images/icons/credit.webp" width="18" style="vertical-align: middle;">
+                                <span style="font-family: 'Jura'; font-weight: normal;">6,000</span>
+                            </div>
+                            <div>
+                                <img src="images/icons/token.webp" width="18" style="vertical-align: middle;">
+                                <span style="font-family: 'Jura'; font-weight: normal;">120</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-family: 'Jura'; font-weight: normal;">Steel Extension Spring</span></td>
+                        <td><span style="font-family: 'Jura'; font-weight: normal;">4</span></td>
+                        <td>
+                            <div>
+                                <img src="images/icons/credit.webp" width="18" style="vertical-align: middle;">
+                                <span style="font-family: 'Jura'; font-weight: normal;">1,500</span>
+                            </div>
+                            <div>
+                                <img src="images/icons/token.webp" width="18" style="vertical-align: middle;">
+                                <span style="font-family: 'Jura'; font-weight: normal;">60</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        
+                        <td><span style="font-family: 'Jura'; font-weight: normal;">Tension Compressor</span></td>
+                        <td><span style="font-family: 'Jura'; font-weight: normal;">1</span></td>
+                        <td>
+                            <div>
+                                <img src="images/icons/credit.webp" width="18" style="vertical-align: middle;">
+                            <span style="font-family: 'Jura'; font-weight: normal;">4,500</span>
+                            </div>
+                            <div>
+                                <img src="images/icons/token.webp" width="18" style="vertical-align: middle;">
+                                <span style="font-family: 'Jura'; font-weight: normal;">55</span>
+                            </div>
+                            
+                        </td>
+                    </tr>
+                
+                </table>
+
+            `
+        },
             
         {
             id: "harper",
@@ -5424,7 +5644,7 @@
             zoomThreshold: -0.6,
             title: `<span style="color: white; font-family: 'Jura'; font-size: 24px; font-weight: normal;">Harper</span>`,
             content: `
-                <img src="images/npcs/Harper0.png" alt="Harper" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+                <img src="images/npcs/Harper0.webp" alt="Harper" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
                 
                 <span style="color: white; font-family: 'Jura'; font-weight: 300; font-size: 18px;">Vendor.<br></span>
 
@@ -5733,17 +5953,18 @@
             name: "Suburbs",
             title: `<span style="color: #FAFAFB; font-family: 'Jura'; font-size: 14px; font-weight: normal;">Suburbs</span>`,
         },
-        
-        
-        
         {
-            id: "fragmentAirflow",
-            position: transCoord(4446,2870),
+            id: "dirwikWorkshop",
+            position: transCoord(3220,1612),
             typeIdentifier: '[staticLabel]',
             zoomThreshold: -2,
-            name: "Airflow Fragment",
-            title: `<span style="color: #FAFAFB; font-family: 'Jura'; font-size: 14px; font-weight: normal;">Airflow<br>Fragment</span>`,
+            name: "Workshop",
+            title: `<span style="color: #FAFAFB; font-family: 'Jura'; font-size: 14px; font-weight: normal;">Workshop</span>`,
         },
+        
+        
+        
+        
         {
             id: "fragmentAven",
             position: transCoord(4968,2518),
@@ -5760,6 +5981,14 @@
             zoomThreshold: -2,
             name: "Highrise Sector",
             title: `<span style="color: #FAFAFB; font-family: 'Jura'; font-size: 14px; font-weight: normal;">Highrise Sector</span>`,
+        },
+        {
+            id: "fragmentLegacy",
+            position: transCoord(4225,2870),
+            typeIdentifier: '[staticLabel]',
+            zoomThreshold: -2,
+            name: "Legacy Foundation",
+            title: `<span style="color: #FAFAFB; font-family: 'Jura'; font-size: 14px; font-weight: normal;">Legacy<br>Foundation</span>`,
         },
         {
             id: "fragmentPentagon",
@@ -5782,11 +6011,11 @@
         
         {
             id: "stackVoid",
-            position: transCoord(3985,1365),
+            position: transCoord(3460,250),
             typeIdentifier: '[staticLabel]',
             zoomThreshold: -2,
             name: "Buq0's Void",
-            title: `<span style="color: #FAFAFB; font-family: 'Jura'; font-size: 14px; font-weight: normal;">Flying Crane</span>`,
+            title: `<span style="color: #FAFAFB; font-family: 'Jura'; font-size: 14px; font-weight: normal;">Stack Cake</span>`,
         },
 
         
@@ -6194,7 +6423,7 @@
         "fragment": {
             title: `<span style="font-family: 'Merriweather'; color: orange; font-size: 32px; font-weight: normal;">FRAGMENT</span>`,
             content: `
-                <img src="images/districts/fragment.png" alt="Fragment" style="width: 100%; border-radius: 8px; display: block; margin: 0 auto;">
+                <img src="images/districts/fragment.webp" alt="Fragment" style="width: 100%; border-radius: 8px; display: block; margin: 0 auto;">
                 <p><span style="font-family: 'Quicksand'; color: white; font-size: 18px;">Fragment is Verna's financial district, and the
                     3rd largest of the main 8 districts.<br>The wide and tall building complexes here rise above the rest of the city,
                     with greener, lower areas to the south, and towering skyscrapers populating the rest of the streets along with the
@@ -6233,7 +6462,7 @@
         "downtown": {
             title: `<span style="font-family: 'Sarpanch'; color: #7AE0FF; font-size: 32px; font-weight: normal;"><i>DOWNTOWN</i></span>`,
             content: `
-                <img src="images/districts/downtown.png" alt="Downtown" style="width: 100%; border-radius: 8px; display: block; margin: 0 auto;">
+                <img src="images/districts/downtown.webp" alt="Downtown" style="width: 100%; border-radius: 8px; display: block; margin: 0 auto;">
                 <p><span style="font-family: 'Quicksand'; color: white; font-size: 18px;">Downtown is the city center and the 3rd smallest
                     of the main 8 districts in Verna.<br>The buildings here are of moderate height and of various types: residential, office,
                     and even some towers like the Apollo tower, GL tower, and the tallest tower in the district, Vertigo.
@@ -6243,7 +6472,7 @@
         "dirwik": {
             title: `<span style="font-family: 'Balthazar'; color: #0091D2; font-size: 32px; font-weight: normal;">DIRWIK</span>`,
             content: `
-                <img src="images/districts/dirwik.png" alt="Dirwik" style="width: 100%; border-radius: 8px; display: block; margin: 0 auto;">
+                <img src="images/districts/dirwik.webp" alt="Dirwik" style="width: 100%; border-radius: 8px; display: block; margin: 0 auto;">
                 <p><span style="font-family: 'Quicksand'; color: white; font-size: 18px;">Dirwik is the largest district in Verna. It's a
                     residential-commercial district, with many middle to middle-lower class apartment buildings and complexes holding a neon blue
                     aesthetic. It is also home to many companies and office buildings, like PRK Tech, Dirwik Corporation, and even Artemis,
@@ -6254,7 +6483,7 @@
         "stack": {
             title: `<span style="font-family: 'Inconsolatazi4varl_qu'; color: #D800FF; font-size: 32px; font-weight: normal;">STACK</span>`,
             content: `
-                <img src="images/districts/PLACEHOLDER.png" alt="Stack" style="width: 100%; border-radius: 8px; display: block; margin: 0 auto;">
+                <img src="images/districts/stack.webp" alt="Stack" style="width: 100%; border-radius: 8px; display: block; margin: 0 auto;">
                 <p><span style="font-family: 'Quicksand'; color: white; font-size: 18px;">Stack is an industrial district and the fourth largest
                     of the 8 main districts in Verna. The pollution emitted from the numerous smokestacks across the various factories give
                     the buildings and warehouses here a dirty and oxidized look.
@@ -6274,7 +6503,7 @@
         "vertex": {
             title: `<span style="font-family: 'Quicksand'; color: #8BB2D3; font-size: 32px; font-weight: normal;">VERTEX</span>`,
             content: `
-                <img src="images/districts/PLACEHOLDER.png" alt="Vertex" style="width: 100%; border-radius: 8px; display: block; margin: 0 auto;">
+                <img src="images/districts/vertex.webp" alt="Vertex" style="width: 100%; border-radius: 8px; display: block; margin: 0 auto;">
                 <p><span style="font-family: 'Quicksand'; color: white; font-size: 18px;">Vertex is the prime construct of Verna. Standing at
                     900 meters tall, this superstructure is a center of trade outside the city, and a monument to human ingenuity. It might even
                     hold its own jurisdiction.
@@ -7667,11 +7896,15 @@
             document.getElementById("sidebar-title").innerHTML = `
             <span style="font-family: 'Comic Neue Angular'; color: #A17FFF; font-size: 32px; font-weight: normal;">Super Changelog 64</span>`;
             document.getElementById("sidebar-content").innerHTML = `
-                <p><span style="font-family: 'Jura'; color: white; font-size: 18px;">Added:<br><br>
-                    -Everything<br><br><br>
+                <p><span style="font-family: 'Jura'; color: white; font-size: 18px;">
+                    - Added checkpoints introduced in 1.52<br>
+                    - Moved Dirwik Offices Hook Latch to current location<br>
+                    - Updated Fragment/Stack district boundaries<br>
+                    - Updated Stack blockout<br><br><br><br>
+
                     
                     Upcoming:<br><br>
-                    -Public release, maybe.
+                    -Public release, hopefully.<br>
                     
                     ETA: <i>soon™</i><br><br>
                     </span></p>
